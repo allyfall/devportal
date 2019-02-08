@@ -1,0 +1,38 @@
+body{
+	background: $bgcolor;
+	color:$txcolor;
+	font-size: $fntsz;
+	font-family:$ffam1 ;
+}
+
+section {
+	p{
+		@include box;
+	}
+}
+
+nav{
+	text-align: center;
+	ul{
+		li{
+			list-style: none;
+			display:inline-block;
+			padding-right: 2%;
+			@include box;
+			a{
+				@include link;
+			}//a
+			a:hover{
+				background:$txcolor;
+				color:black;
+			}//hover
+		}//li
+	}//ul
+}//end nav nest. 
+
+h1{
+	@include eyeCatcher;
+}
+h2{
+	@include eyeCatcher;
+}

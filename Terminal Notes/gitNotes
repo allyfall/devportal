@@ -1,0 +1,421 @@
+Last login: Fri Jan 18 15:06:57 on console
+engr2gw-0-247-dhcp:~ AllyFaller$ git --version
+git version 2.20.1
+engr2gw-0-247-dhcp:~ AllyFaller$ ls
+Creative Cloud Files	Dropbox			Music
+Desktop			Google Drive		Pictures
+Documents		Library			Public
+Downloads		Movies
+engr2gw-0-247-dhcp:~ AllyFaller$ cd Desktop
+engr2gw-0-247-dhcp:Desktop AllyFaller$ ls
+Christmas Writing.docx			~$Alana_Faller_Homework_09.xlsm
+Class Sp 2018 .xlsx			~$AlterEcoCosts (Autosaved).xlsx
+EarthLab Resume.pdf			~$Class Sp 2018.xlsx
+Faller, Alana.xlsx			~$Fall2017.xlsx
+Graphic Design				~$Faller.Alana.ExcelProject.xlsx
+IntermedFictNovella.docx		~$Faller_Alana_excel.xlsx
+LabAndClassSchedule.xlsx		~$Quiz problems 4-6.xlsx
+RenEng Final.docx			~$arse and smooth critique.docx
+WEB Notes				~$b Exam 2.docx
+Writing Contest Summer 2018		~$cketsWritingContest-Faller.docx
+bash-me.html				~$otes for Ren Eng.docx
+dev					~$termedFictNovella.docx
+elk.jpg
+engr2gw-0-247-dhcp:Desktop AllyFaller$ cd dev
+engr2gw-0-247-dhcp:dev AllyFaller$ mkdir
+usage: mkdir [-pv] [-m mode] directory ...
+engr2gw-0-247-dhcp:dev AllyFaller$ mkdir gitscool
+engr2gw-0-247-dhcp:dev AllyFaller$ cd gitscool
+engr2gw-0-247-dhcp:gitscool AllyFaller$ pwd
+/Users/AllyFaller/Desktop/dev/gitscool
+engr2gw-0-247-dhcp:gitscool AllyFaller$ mkdir css img js
+engr2gw-0-247-dhcp:gitscool AllyFaller$ touch index.html
+engr2gw-0-247-dhcp:gitscool AllyFaller$ ls
+css		img		index.html	js
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git init
+Initialized empty Git repository in /Users/AllyFaller/Desktop/dev/gitscool/.git/
+engr2gw-0-247-dhcp:gitscool AllyFaller$ ls -la
+total 0
+drwxr-xr-x   7 AllyFaller  staff  224 Jan 22 15:53 .
+drwxr-xr-x  10 AllyFaller  staff  320 Jan 22 15:53 ..
+drwxr-xr-x  10 AllyFaller  staff  320 Jan 22 15:53 .git
+drwxr-xr-x   2 AllyFaller  staff   64 Jan 22 15:51 css
+drwxr-xr-x   2 AllyFaller  staff   64 Jan 22 15:51 img
+-rw-r--r--   1 AllyFaller  staff    0 Jan 22 15:52 index.html
+drwxr-xr-x   2 AllyFaller  staff   64 Jan 22 15:51 js
+engr2gw-0-247-dhcp:gitscool AllyFaller$ clear
+
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git add .
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   index.html
+
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git commit -m "first commit"
+[master (root-commit) 1b91c1d] first commit
+ Committer: Alana Mary Faller <AllyFaller@engr2gw-0-247-dhcp.int.colorado.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 12 insertions(+)
+ create mode 100644 index.html
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git log
+commit 1b91c1d07283c378b4436ee53b2550b72f91af40 (HEAD -> master)
+Author: Alana Mary Faller <AllyFaller@engr2gw-0-247-dhcp.int.colorado.edu>
+Date:   Tue Jan 22 16:03:13 2019 -0700
+
+    first commit
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git config --global user.name "Ally Faller"
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git config --global user.email "alfa8405@colorado.edu
+> "
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git checkout index.html
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git checkout index.html
+engr2gw-0-247-dhcp:gitscool AllyFaller$ open index.html
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git add .
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   index.html
+
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git commit -m "added lorem sections"
+[master a443cc4] added lorem sections
+ 1 file changed, 16 insertions(+)
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git log
+commit a443cc4f8d48e592872c5a5a9464099bd3a140b0 (HEAD -> master)
+Author: Ally Faller <alfa8405@colorado.edu>
+Date:   Tue Jan 22 16:14:12 2019 -0700
+
+    added lorem sections
+
+commit 1b91c1d07283c378b4436ee53b2550b72f91af40
+Author: Alana Mary Faller <AllyFaller@engr2gw-0-247-dhcp.int.colorado.edu>
+Date:   Tue Jan 22 16:03:13 2019 -0700
+
+    first commit
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git checkout index.html
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git checkout 1b91c1d07
+Note: checking out '1b91c1d07'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 1b91c1d first commit
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git status
+HEAD detached at 1b91c1d
+nothing to commit, working tree clean
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git branch
+* (HEAD detached at 1b91c1d)
+  master
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git branch starter 1b91c1d07
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git branch starter
+fatal: A branch named 'starter' already exists.
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git checkout starter
+Switched to branch 'starter'
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git checkout master
+Switched to branch 'master'
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git branch 
+* master
+  starter
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git log
+commit a443cc4f8d48e592872c5a5a9464099bd3a140b0 (HEAD -> master)
+Author: Ally Faller <alfa8405@colorado.edu>
+Date:   Tue Jan 22 16:14:12 2019 -0700
+
+    added lorem sections
+
+commit 1b91c1d07283c378b4436ee53b2550b72f91af40 (starter)
+Author: Alana Mary Faller <AllyFaller@engr2gw-0-247-dhcp.int.colorado.edu>
+Date:   Tue Jan 22 16:03:13 2019 -0700
+
+    first commit
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git branch
+* master
+  starter
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git branch altversion
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git branch
+  altversion
+* master
+  starter
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git checkout altversion
+Switched to branch 'altversion'
+engr2gw-0-247-dhcp:gitscool AllyFaller$ get branch
+-bash: get: command not found
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git branch
+* altversion
+  master
+  starter
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git status
+On branch altversion
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git add . 
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git status
+On branch altversion
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   index.html
+
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git commit -m "added broken social links"
+[altversion 8da4c75] added broken social links
+ 1 file changed, 9 insertions(+)
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git log
+commit 8da4c75687be08c71955f14c22fe2cbff757f2f6 (HEAD -> altversion)
+Author: Ally Faller <alfa8405@colorado.edu>
+Date:   Tue Jan 22 16:29:53 2019 -0700
+
+    added broken social links
+
+commit a443cc4f8d48e592872c5a5a9464099bd3a140b0 (master)
+Author: Ally Faller <alfa8405@colorado.edu>
+Date:   Tue Jan 22 16:14:12 2019 -0700
+
+    added lorem sections
+
+commit 1b91c1d07283c378b4436ee53b2550b72f91af40 (starter)
+Author: Alana Mary Faller <AllyFaller@engr2gw-0-247-dhcp.int.colorado.edu>
+Date:   Tue Jan 22 16:03:13 2019 -0700
+
+    first commit
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git checkout master
+Switched to branch 'master'
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git log
+commit a443cc4f8d48e592872c5a5a9464099bd3a140b0 (HEAD -> master)
+Author: Ally Faller <alfa8405@colorado.edu>
+Date:   Tue Jan 22 16:14:12 2019 -0700
+
+    added lorem sections
+
+commit 1b91c1d07283c378b4436ee53b2550b72f91af40 (starter)
+Author: Alana Mary Faller <AllyFaller@engr2gw-0-247-dhcp.int.colorado.edu>
+Date:   Tue Jan 22 16:03:13 2019 -0700
+
+    first commit
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git checkout master
+Already on 'master'
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git merge altversion
+Updating a443cc4..8da4c75
+Fast-forward
+ index.html | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git status
+On branch master
+nothing to commit, working tree clean
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git add .
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git commit -m "merged alt"
+On branch master
+nothing to commit, working tree clean
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git add .
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git commit -m "merged alt"
+[master 2a5a8d9] merged alt
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git log
+commit 2a5a8d9bd6345082c78882b8b94aa26f5b8effa6 (HEAD -> master)
+Author: Ally Faller <alfa8405@colorado.edu>
+Date:   Tue Jan 22 16:35:26 2019 -0700
+
+    merged alt
+
+commit 8da4c75687be08c71955f14c22fe2cbff757f2f6 (altversion)
+Author: Ally Faller <alfa8405@colorado.edu>
+Date:   Tue Jan 22 16:29:53 2019 -0700
+
+    added broken social links
+
+commit a443cc4f8d48e592872c5a5a9464099bd3a140b0
+Author: Ally Faller <alfa8405@colorado.edu>
+Date:   Tue Jan 22 16:14:12 2019 -0700
+
+    added lorem sections
+
+commit 1b91c1d07283c378b4436ee53b2550b72f91af40 (starter)
+Author: Alana Mary Faller <AllyFaller@engr2gw-0-247-dhcp.int.colorado.edu>
+Date:   Tue Jan 22 16:03:13 2019 -0700
+
+    first commit
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git branch 
+  altversion
+* master
+  starter
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git branch -D altversion
+Deleted branch altversion (was 8da4c75).
+engr2gw-0-247-dhcp:gitscool AllyFaller$ git branch
+* master
+  starter
+engr2gw-0-247-dhcp:gitscool AllyFaller$ cd ..
+engr2gw-0-247-dhcp:dev AllyFaller$ mkdir gitsmore
+engr2gw-0-247-dhcp:dev AllyFaller$ cd gitsmore
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ mkdir css img js
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ touch index.html
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ ls
+css		img		index.html	js
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git init
+Initialized empty Git repository in /Users/AllyFaller/Desktop/dev/gitsmore/.git/
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ ls
+css		img		index.html	js
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ ls -la
+total 8
+drwxr-xr-x   7 AllyFaller  staff  224 Jan 22 16:41 .
+drwxr-xr-x  11 AllyFaller  staff  352 Jan 22 16:41 ..
+drwxr-xr-x  10 AllyFaller  staff  320 Jan 22 16:41 .git
+drwxr-xr-x   2 AllyFaller  staff   64 Jan 22 16:39 css
+drwxr-xr-x   2 AllyFaller  staff   64 Jan 22 16:39 img
+-rw-r--r--   1 AllyFaller  staff  163 Jan 22 16:41 index.html
+drwxr-xr-x   2 AllyFaller  staff   64 Jan 22 16:39 js
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git add .
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   index.html
+
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git commit -m "first commit"
+[master (root-commit) e40d542] first commit
+ 1 file changed, 12 insertions(+)
+ create mode 100644 index.html
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git log
+commit e40d5422ec131eb99e5d020fd80f59fef08c37fe (HEAD -> master)
+Author: Ally Faller <alfa8405@colorado.edu>
+Date:   Tue Jan 22 16:42:26 2019 -0700
+
+    first commit
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git add .
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git commit -m "added section of lorm"
+[master 8752199] added section of lorm
+ 1 file changed, 9 insertions(+)
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git log
+commit 87521995e0ea6f310b101094b649cc44ed04af1e (HEAD -> master)
+Author: Ally Faller <alfa8405@colorado.edu>
+Date:   Tue Jan 22 16:43:50 2019 -0700
+
+    added section of lorm
+
+commit e40d5422ec131eb99e5d020fd80f59fef08c37fe
+Author: Ally Faller <alfa8405@colorado.edu>
+Date:   Tue Jan 22 16:42:26 2019 -0700
+
+    first commit
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git brach
+git: 'brach' is not a git command. See 'git --help'.
+
+The most similar command is
+	branch
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git branch
+* master
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git branch altversion
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git branch
+  altversion
+* master
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git checkout altversion
+Switched to branch 'altversion'
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git status
+On branch altversion
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git add .
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git commit -m "added ugly footer"
+[altversion a8453cc] added ugly footer
+ 1 file changed, 6 insertions(+)
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git log
+commit a8453ccc7000844a1ec9db14c11df98af703d5c5 (HEAD -> altversion)
+Author: Ally Faller <alfa8405@colorado.edu>
+Date:   Tue Jan 22 16:45:48 2019 -0700
+
+    added ugly footer
+
+commit 87521995e0ea6f310b101094b649cc44ed04af1e (master)
+Author: Ally Faller <alfa8405@colorado.edu>
+Date:   Tue Jan 22 16:43:50 2019 -0700
+
+    added section of lorm
+
+commit e40d5422ec131eb99e5d020fd80f59fef08c37fe
+Author: Ally Faller <alfa8405@colorado.edu>
+Date:   Tue Jan 22 16:42:26 2019 -0700
+
+    first commit
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git branch
+* altversion
+  master
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git checkout master
+Switched to branch 'master'
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ git checkout altversion
+Switched to branch 'altversion'
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ open index.html
+engr2gw-0-247-dhcp:gitsmore AllyFaller$ 

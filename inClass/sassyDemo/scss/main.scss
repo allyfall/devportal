@@ -1,0 +1,9 @@
+@import "variable";
+@import "mixins";
+@import "base";
+@import "layout";
+//the order of these do actually matter. Variables first. 
+//Also, you will never write to the main.css. You will just write here
+//don't change the css doc. Sass will overwrite it. 
+//in variable $ declares variables. 
+//@include is for mixins 

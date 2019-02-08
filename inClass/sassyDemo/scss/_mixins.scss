@@ -1,0 +1,22 @@
+@mixin box{
+	background:white;
+	border:2px double black;
+	padding:15px;
+	@include roundy;
+}
+@mixin roundy{
+	border-radius:$smooth;
+}
+@mixin link{
+	font-family:monospace;
+	font-size: $fntsz;
+	text-decoration: none;
+	color:$txcolor;
+}
+@mixin eyeCatcher{
+	font-family:monospace;
+	font-size:3em;
+	color:white;
+	text-align: center;
+	text-decoration: underline;
+}
