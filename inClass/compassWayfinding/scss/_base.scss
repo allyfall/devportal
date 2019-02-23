@@ -1,0 +1,6 @@
+body{
+	@include background(linear-gradient(to bottom, lime, purple));
+}
+header h1{
+	@include heading;
+}

@@ -1,0 +1,74 @@
+body {
+  background: url(../img/DevBG.JPG);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #243142;
+  background-repeat: no-repeat; }
+
+h1 {
+  font-size: 6em;
+  font-family: "Megrim",serif;
+  text-align: center; }
+
+h2 {
+  font-family: "Megrim", serif;
+  text-align: center;
+  font-size: 3em; }
+
+section {
+  background: #243142;
+  color: #bfcadb;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.1em;
+  line-height: 1.3em;
+  text-decoration: none;
+  display: block;
+  margin: 3%; }
+  section a {
+    background: #243142;
+    color: #bfcadb;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    text-decoration: none;
+    display: block;
+    margin: 3%; }
+  section h3 {
+    text-size: 1.3em;
+    text-align: center;
+    font-family: "Megrim", serif; }
+  section p {
+    margin-left: 5%;
+    display: none; }
+
+section:hover p {
+  display: block; }
+
+.maingrid {
+  display: grid;
+  grid-template-rows: 200px repeat(6, 300px);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "head head head head head" "bash bash bash . ." ". . letters letters letters" "corpse corpse corpse . ." ". . soon1 soon1 soon1" "soon2 soon2 soon2 . ." ". . soon3 soon3 soon3"; }
+
+.gridhead {
+  grid-area: head; }
+
+.p1 {
+  grid-area: bash; }
+
+.p2 {
+  grid-area: letters; }
+
+.p3 {
+  grid-area: corpse; }
+
+.p4 {
+  grid-area: soon1; }
+
+.p5 {
+  grid-area: soon2; }
+
+.p6 {
+  grid-area: soon3; }
+
+/*# sourceMappingURL=main.css.map */

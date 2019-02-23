@@ -1,0 +1,60 @@
+1. Use class to target the parent that you want to contain as grid. display: grid;
+2. set up grid: grid-template-columns, grid-template-rows. understand column proportions. 
+	-can use fr to set up how large you want the colunms to be. ex: 1fr 2fr.
+	-grid-template-columns:1fr 2fr;
+	 grid-template-rows:150px auto 1fr;(maybe don't use fr for rows. Width doesn't really grow, but height does. So the % will change depending on size of content.)
+3. to put children into grid, target each child and tell it where to go. Use classes. 
+	-child: grid-column:1/3;
+			grid-row:1/2;
+
+To set up normal grid:
+.site{
+	display: grid;
+	grid-template-columns:1fr 2fr 1fr;
+	grid-template-rows:200px auto 150px;    
+}
+
+.masthead{
+	grid-row:1;
+	grid-column: 1/4;
+}
+.page-title{
+	grid-column: 3/4;
+	grid-row:2/3;
+}
+.sidebar{
+	grid-column: 1/2;
+	grid-row: 2/3;
+}
+.main-content{
+	grid-column: 2/3;
+	grid-row:2/3 ;
+}
+
+.footer-content{
+	grid-row: 3/4;
+	grid-column: 1/4;
+}
+
+
+Using Grid Areas:
+@media screen and (min-width: 1200px) {
+	.site{
+	    display: grid;
+	    grid-template-columns: repeat(4,1fr);
+	    grid-template-areas: 
+	    	"head head head head"
+	    	"side main . title"
+	    	"foot foot foot foot"
+	}
+}
+
+
+
+
+
+
+Set up grid in dev index: 
+
+row: header row, 8 content rows, footer row
+col: 5? run 1/3 and 2/5? 
