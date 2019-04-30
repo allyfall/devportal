@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>A-Frame Basics</title>
+  	<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+<!-- 	<script src="js/aframe.min.js"></script>
+	<script src="js/aframe.js"></script> -->
+</head>
+<body>
+	<a-scene>
+		<!-- scale is width height depth -->
+		<!-- rotation is pitch, yaw, roll. Maybe not in that order -->
+		<!-- duration is in ms, so 2000 is 2s -->
+		<a-box position="-1 .5 -3" color="thistle" scale="2 1 1" src = "img/texture.jpg" animation="property:rotation; dur:2000; loop:true; from:0 0 0; to: 0  360 0; easing:linear; " animation__move="property:position; loop:2; dur:2000; from: 0 0 0; to:15 0 0;"></a-box>
+		<a-camera position="0 0 3" user-height="0"></a-camera>
+	</a-scene>
+</body>
+</html>

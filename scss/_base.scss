@@ -1,9 +1,12 @@
-body{
+ body{
 	background:url(../img/DevBG.JPG);
 	background-attachment:fixed;
 	background-size: cover;
 	color:$drkblu;
 	background-repeat: no-repeat;
+	padding-bottom: 20px;
+	border: 1px solid transparent;
+	max-height: 100%;
 
 }
 h1{
@@ -17,14 +20,10 @@ h2{
 	text-align: center;
 	font-size:3em;
 }
-// .odd{
-// 	@include leftbox;
-// }
-// .even{
-// 	@include rightbox;
-// }
+
 
 section{
+	transition: 1s ease;
 	a{
 		@include feature;
 	}
@@ -32,6 +31,7 @@ section{
 		text-size:1.3em;
 		text-align: center;
 		font-family:"Megrim", serif;
+		text-decoration: underline;
 	}
 	p{
 		margin-left:5%;
@@ -40,13 +40,36 @@ section{
 	@include feature;
 }
 section:hover{
+	transition: 1s ease;
+
 	p{
 		display: block;
+	}
+	img{
+		display: none;
+	}
+}
+footer{
+	background:$drkblu;
+	height:78px;
+	ul{
+		list-style: none;
+		margin-left: 36%;
+		padding-top: 2%;
+		li{
+			display: inline-block;
+			margin-left: 5%;
+			a{
+				text-decoration: underline;
+				color:$ltgrey;
+				font-size: .9em;
+			}
+		}
 	}
 }
 .maingrid{
 	display:grid;
-	grid-template-rows: 200px repeat(6,300px); 
+	grid-template-rows: 200px repeat(10,300px); 
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-areas: 
 		"head head head head head"
@@ -56,7 +79,11 @@ section:hover{
 		". . soon1 soon1 soon1"
 		"soon2 soon2 soon2 . ."
 		". . soon3 soon3 soon3"
+		"soon4 soon4 soon4 . ."
+		". . soon5 soon5 soon5"
+		"soon6 soon6 soon6 . ."
 }
+
 .gridhead{
 	grid-area: head;
 }
@@ -78,4 +105,24 @@ section:hover{
 .p6{
 	grid-area: soon3;
 }
+.p7{
+	grid-area: soon4;
+}
+.p8{
+	grid-area: soon5;
+}	
+.p9{
+	grid-area: soon6;
+}
+section{
+	img{
+		max-width: 170px;
+		max-height: auto;
+		display: inline-block;
+		margin-left: 35%;
+		padding:2%;
+		border: 2px solid $ltgrey;
+	}
+}
+
 

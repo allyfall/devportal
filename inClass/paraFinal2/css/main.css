@@ -1,0 +1,189 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+  overflow: hidden; 
+}
+
+.parallax{
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y:auto;
+  perspective: 300px
+}
+.paraLayer{
+  position: absolute;
+  top:0;
+  left: 0;
+  right:0;
+  bottom:0;
+}
+.group{
+  position: relative;
+  min-height: 100vh;
+  min-width:100vh;
+  transform-style: inherit;
+  background: 50% 50% / cover;
+  transition:transform .5s;
+}
+
+.group:before{
+  content:" ";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left: 0;
+  right:0;
+  background: 50% 50% / cover;
+}
+.base{
+  transform: translateZ(-40px) scale(1.3);
+  z-index: 5;
+}
+.charG{
+  transform: translateZ(20px) scale(1.1);
+  z-index: 15;
+}
+.charW{
+  transform:translateZ(0) scale(1);
+  z-index: 15;
+}
+.FG{
+  z-index: 9;
+}
+#sect1{
+  z-index: 5;
+}
+#sect2{
+  z-index: 4;
+}
+#sect3{
+  z-index: 3;
+}
+#sect4{
+  z-index: 2;
+}
+#sect5{
+  z-index: 1;
+}
+.holdup{
+  width:100vw;
+  height: 80vh;
+  background:black;
+  z-index: 999;
+}
+/*Setting up the images*/
+#sect1 .base{
+  background:url("../img/Firstb.png") 100% 100% no-repeat;
+  background-size: cover;
+}
+#sect1 .charG{
+  background:url("../img/Girla.png") 70% 100%  no-repeat;
+  margin-left: -10%;
+  min-width: 100vw;
+}
+#sect1 .FG{
+  transform: translateZ(1px) scale(1);
+  background:url("../img/TreesFG.png") no-repeat;
+  background-position: 100% 100%; 
+  background-size:cover;
+}
+#sect2 .base{
+  background:url("../img/First.png") 50% 50% no-repeat;
+  background-size: cover;
+}
+#sect2 .charG{
+  background:url("../img/Girla.png") 70% 100%  no-repeat;
+}
+#sect3 .base{
+  background:url("../img/pathb.png") 100% 50% no-repeat;
+  background-size: cover;
+}
+#sect3 .charG{
+  background:url("../img/Girla.png") 80% 50% no-repeat;
+}
+#sect3 .charW{
+  background:url("../img/Wolfa.png") 50% 50% no-repeat;
+}
+#sect3 .FG{
+  transform: translateZ(6px) scale(1);
+  background:url("../img/PathFG.png") -20% -20% no-repeat;
+  background-size:cover;
+}
+#sect4 .base{
+  background:url("../img/LastBG.png") 50% 100% no-repeat;
+  background-size: cover;
+}
+#sect4 .charG{
+  background:url("../img/Girla.png") 10% 0% no-repeat;
+}
+#sect4 .charW{
+  background:url("../img/Wolfa.png") 90% 50% no-repeat;
+}
+#sect4 .FG{
+  transform: translateZ(80px) scale(.8);
+  background:url("../img/LastFG.png") 100% 100% no-repeat;
+  background-size:cover;
+  left:-15%;
+}
+#sect5 .base{
+  background:url("../img/Fieldb.png") 0% 0% no-repeat;
+  background-size: cover;
+}
+#sect5 .charG{
+  transform: translateZ(90px) scale(.5);
+  background:url("../img/Girla.png") 100% 100% no-repeat;
+}
+#sect5 .charW{
+  transform: translateZ(100px) scale(.6);
+  background:url("../img/Wolfa.png") 30% 100% no-repeat;
+}
+#sect5 .FG{
+  transform: translateZ(70px) scale(.9);
+  background:url("../img/SpringFG.png") 0% 4% no-repeat;
+  background-size:cover;
+}
+
+/*General Formatting Style things*/
+body{
+  background-color: black;
+}
+p{
+  font-size:20px;
+  color:white;
+  font-family: sans-serif;
+  bottom:0;
+  padding:10%;
+  margin-top: 5%;
+  background:rgba(50, 50, 50, .7);
+  border-radius: 20px;
+  z-index: 9999;
+}
+header{
+  position: absolute;
+  min-height: 10%;
+  min-width: 100vw;
+  color: white;
+  font-size: 2em;
+  z-index: 9999;
+  background:rgba(0,0,0, .7);
+}
+h1{
+  font-family: sans-serif;
+  padding-left:10%;
+  padding-bottom: 2%;
+  padding-top: 2%;
+}
+
+
+
+
+
+
+

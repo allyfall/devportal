@@ -3,19 +3,26 @@ body {
   background-attachment: fixed;
   background-size: cover;
   color: #243142;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  padding-bottom: 20px;
+  border: 1px solid transparent;
+  max-height: 100%;
+}
 
 h1 {
   font-size: 6em;
   font-family: "Megrim",serif;
-  text-align: center; }
+  text-align: center;
+}
 
 h2 {
   font-family: "Megrim", serif;
   text-align: center;
-  font-size: 3em; }
+  font-size: 3em;
+}
 
 section {
+  transition: 1s ease;
   background: #243142;
   color: #bfcadb;
   font-family: "Raleway", sans-serif;
@@ -23,52 +30,110 @@ section {
   line-height: 1.3em;
   text-decoration: none;
   display: block;
-  margin: 3%; }
-  section a {
-    background: #243142;
-    color: #bfcadb;
-    font-family: "Raleway", sans-serif;
-    font-size: 1.1em;
-    line-height: 1.3em;
-    text-decoration: none;
-    display: block;
-    margin: 3%; }
-  section h3 {
-    text-size: 1.3em;
-    text-align: center;
-    font-family: "Megrim", serif; }
-  section p {
-    margin-left: 5%;
-    display: none; }
+  margin: 3%;
+}
+section a {
+  background: #243142;
+  color: #bfcadb;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.1em;
+  line-height: 1.3em;
+  text-decoration: none;
+  display: block;
+  margin: 3%;
+}
+section h3 {
+  text-size: 1.3em;
+  text-align: center;
+  font-family: "Megrim", serif;
+  text-decoration: underline;
+}
+section p {
+  margin-left: 5%;
+  display: none;
+}
 
+section:hover {
+  transition: 1s ease;
+}
 section:hover p {
-  display: block; }
+  display: block;
+}
+section:hover img {
+  display: none;
+}
+
+footer {
+  background: #243142;
+  height: 78px;
+}
+footer ul {
+  list-style: none;
+  margin-left: 36%;
+  padding-top: 2%;
+}
+footer ul li {
+  display: inline-block;
+  margin-left: 5%;
+}
+footer ul li a {
+  text-decoration: underline;
+  color: #bfcadb;
+  font-size: .9em;
+}
 
 .maingrid {
   display: grid;
-  grid-template-rows: 200px repeat(6, 300px);
+  grid-template-rows: 200px repeat(10, 300px);
   grid-template-columns: repeat(5, 1fr);
-  grid-template-areas: "head head head head head" "bash bash bash . ." ". . letters letters letters" "corpse corpse corpse . ." ". . soon1 soon1 soon1" "soon2 soon2 soon2 . ." ". . soon3 soon3 soon3"; }
+  grid-template-areas: "head head head head head" "bash bash bash . ." ". . letters letters letters" "corpse corpse corpse . ." ". . soon1 soon1 soon1" "soon2 soon2 soon2 . ." ". . soon3 soon3 soon3" "soon4 soon4 soon4 . ." ". . soon5 soon5 soon5" "soon6 soon6 soon6 . .";
+}
 
 .gridhead {
-  grid-area: head; }
+  grid-area: head;
+}
 
 .p1 {
-  grid-area: bash; }
+  grid-area: bash;
+}
 
 .p2 {
-  grid-area: letters; }
+  grid-area: letters;
+}
 
 .p3 {
-  grid-area: corpse; }
+  grid-area: corpse;
+}
 
 .p4 {
-  grid-area: soon1; }
+  grid-area: soon1;
+}
 
 .p5 {
-  grid-area: soon2; }
+  grid-area: soon2;
+}
 
 .p6 {
-  grid-area: soon3; }
+  grid-area: soon3;
+}
 
-/*# sourceMappingURL=main.css.map */
+.p7 {
+  grid-area: soon4;
+}
+
+.p8 {
+  grid-area: soon5;
+}
+
+.p9 {
+  grid-area: soon6;
+}
+
+section img {
+  max-width: 170px;
+  max-height: auto;
+  display: inline-block;
+  margin-left: 35%;
+  padding: 2%;
+  border: 2px solid #bfcadb;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Building A basic Scene</title>
+	<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+	<script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+</head>
+<body>
+	<a-scene>
+		<a-assets>
+			<img id="feathertext" src = "img/texture.jpg">
+			<img id = "background" src = "img/Mtnbkg.png">
+		</a-assets>
+		<a-cylinder src = "#feathertext" color = "thistle" position = "0 2 -5" rotation="0 45 45" scale = "1 2 7">
+			<a-sphere color = "black" scale = "1 1 1">
+				<a-animation attribute = "position" to = "0 2.5 -5" direction = "alternate" dur = "2000" repeat = "indefinite"></a-animation>
+			</a-sphere>
+		</a-cylinder>
+		<a-box color = "white" scale = "1 2 1" position = "0 2 -5">
+			<a-animation attribute = "position" to = "0 2.5 -5" direction = "alternate" dur = "2000" repeat = "indefinite"></a-animation>
+		</a-box>
+		<a-entity id = "box" geometry = "primitive: box" material = "color: tomato" position="0 2 -8" rotation="90 0 90" scale = "2 2 2"><a-animation attribute = "position" to = "0 2.5 -5" direction = "alternate" dur = "2000" repeat = "indefinite"></a-animation></a-entity>
+		<!-- <a-entity environment = "preset: forest; dressingAmount: 500"></a-entity> -->
+		<a-sky src="#background"></a-sky>
+		<a-plane rotation = "-90 0 0" width = "30" height = "30" color = "teal"></a-plane>
+		<a-light type = "ambient" color = "#445451"></a-light>
+		<a-light type = "point" intensity = "2" position = "2 4 4"></a-light>
+	</a-scene>
+</body>
+</html>
